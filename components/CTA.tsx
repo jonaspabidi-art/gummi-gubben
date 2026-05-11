@@ -5,7 +5,7 @@ interface CTAProps {
 export default function CTA({ onBookClick }: CTAProps) {
   return (
     <section
-      className="py-24 px-[var(--spacing-margin-desktop)] text-center"
+      className="py-16 md:py-24 px-4 md:px-[var(--spacing-margin-desktop)] text-center"
       style={{
         background: "var(--color-primary)",
         color: "var(--color-on-primary)",
@@ -13,7 +13,7 @@ export default function CTA({ onBookClick }: CTAProps) {
     >
       <div className="max-w-3xl mx-auto">
         <h2
-          className="text-5xl font-bold uppercase mb-6 tracking-tight"
+          className="text-3xl md:text-5xl font-bold uppercase mb-4 md:mb-6 tracking-tight"
           style={{
             fontFamily: "var(--font-headline)",
             letterSpacing: "-0.02em",
@@ -34,7 +34,7 @@ export default function CTA({ onBookClick }: CTAProps) {
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <button
             onClick={onBookClick}
-            className="px-12 py-5 text-sm font-semibold uppercase tracking-widest transition-all shadow-xl hover:brightness-110 cursor-pointer"
+            className="w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 text-sm font-semibold uppercase tracking-widest transition-all shadow-xl hover:brightness-110 cursor-pointer"
             style={{
               fontFamily: "var(--font-headline)",
               background: "var(--color-on-surface)",
@@ -45,7 +45,7 @@ export default function CTA({ onBookClick }: CTAProps) {
           </button>
           <a
             href="tel:031-517764"
-            className="inline-flex items-center justify-center gap-3 border-2 px-12 py-5 text-sm font-semibold uppercase tracking-widest transition-all hover:opacity-80"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 border-2 px-8 md:px-12 py-4 md:py-5 text-sm font-semibold uppercase tracking-widest transition-all hover:opacity-80"
             style={{
               fontFamily: "var(--font-headline)",
               borderColor: "var(--color-on-primary)",

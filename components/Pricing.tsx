@@ -50,19 +50,19 @@ interface PricingProps {
 export default function Pricing({ onBookClick }: PricingProps) {
   return (
     <section
-      className="py-24 border-y"
+      className="py-16 md:py-24 border-y"
       style={{
         background: "var(--color-surface-container-low)",
         borderColor: "var(--color-outline-variant)",
       }}
     >
       <div
-        className="mx-auto px-[var(--spacing-margin-desktop)]"
+        className="mx-auto px-4 md:px-[var(--spacing-margin-desktop)]"
         style={{ maxWidth: "var(--spacing-container-max)" }}
       >
         <div className="text-center mb-16">
           <h2
-            className="text-5xl font-bold uppercase mb-4 tracking-tight"
+            className="text-3xl md:text-5xl font-bold uppercase mb-4 tracking-tight"
             style={{
               fontFamily: "var(--font-headline)",
               letterSpacing: "-0.02em",
@@ -86,7 +86,7 @@ export default function Pricing({ onBookClick }: PricingProps) {
             tier.featured ? (
               <div
                 key={tier.name}
-                className="border-2 p-8 flex flex-col relative shadow-2xl scale-105 z-10"
+                className="border-2 p-6 md:p-8 flex flex-col relative shadow-2xl md:scale-105 z-10"
                 style={{
                   background: "var(--color-inverse-surface)",
                   color: "var(--color-surface)",
@@ -153,7 +153,7 @@ export default function Pricing({ onBookClick }: PricingProps) {
             ) : (
               <div
                 key={tier.name}
-                className="border-2 p-8 flex flex-col"
+                className="border-2 p-6 md:p-8 flex flex-col"
                 style={{
                   background: "var(--color-surface)",
                   borderColor: "var(--color-outline-variant)",

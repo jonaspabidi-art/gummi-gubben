@@ -5,11 +5,8 @@ interface HeroProps {
 export default function Hero({ onBookClick }: HeroProps) {
   return (
     <section
-      className="relative flex items-center overflow-hidden"
-      style={{
-        height: "614px",
-        backgroundColor: "var(--color-inverse-surface)",
-      }}
+      className="relative flex items-center overflow-hidden min-h-[420px] md:min-h-[614px]"
+      style={{ backgroundColor: "var(--color-inverse-surface)" }}
     >
       {/* Background image */}
       <div className="absolute inset-0 opacity-40">
@@ -21,19 +18,19 @@ export default function Hero({ onBookClick }: HeroProps) {
       </div>
 
       <div
-        className="relative z-10 w-full mx-auto px-[var(--spacing-margin-desktop)]"
+        className="relative z-10 w-full mx-auto px-4 md:px-[var(--spacing-margin-desktop)] py-8 md:py-0"
         style={{ maxWidth: "var(--spacing-container-max)" }}
       >
         <div
-          className="max-w-2xl p-12 border-l-8"
+          className="w-full md:max-w-2xl p-6 md:p-12 border-l-4 md:border-l-8"
           style={{
-            background: "rgba(249,249,249,0.9)",
+            background: "rgba(249,249,249,0.92)",
             backdropFilter: "blur(4px)",
             borderColor: "var(--color-primary)",
           }}
         >
           <h1
-            className="text-5xl font-bold uppercase mb-4 leading-tight tracking-tight"
+            className="text-3xl md:text-5xl font-bold uppercase mb-3 md:mb-4 leading-tight"
             style={{
               fontFamily: "var(--font-headline)",
               color: "var(--color-on-surface)",
@@ -43,7 +40,7 @@ export default function Hero({ onBookClick }: HeroProps) {
             Däckhotell i Världsklass
           </h1>
           <p
-            className="text-lg mb-8 leading-relaxed"
+            className="text-base md:text-lg mb-6 md:mb-8 leading-relaxed"
             style={{
               fontFamily: "var(--font-body)",
               color: "var(--color-on-surface-variant)",
@@ -52,10 +49,10 @@ export default function Hero({ onBookClick }: HeroProps) {
             Sluta släpa på tunga, smutsiga däck. Låt proffsen på Gummigubben ta
             hand om dina hjul under säsongsvilan.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <button
               onClick={onBookClick}
-              className="px-8 py-4 text-sm uppercase tracking-widest font-semibold hover:shadow-lg transition-all cursor-pointer"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold hover:shadow-lg transition-all cursor-pointer"
               style={{
                 fontFamily: "var(--font-headline)",
                 background: "var(--color-primary-container)",
@@ -65,7 +62,7 @@ export default function Hero({ onBookClick }: HeroProps) {
               Boka Plats Nu
             </button>
             <button
-              className="border-2 px-8 py-4 text-sm uppercase tracking-widest font-semibold transition-all cursor-pointer hover:opacity-80"
+              className="w-full sm:w-auto border-2 px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold transition-all cursor-pointer hover:opacity-80"
               style={{
                 fontFamily: "var(--font-headline)",
                 borderColor: "var(--color-on-surface)",

@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import ValueProps from "@/components/ValueProps";
-import Pricing from "@/components/Pricing";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import HomeHero from "@/components/home/HomeHero";
+import Services from "@/components/home/Services";
+import Offers from "@/components/home/Offers";
+import Info from "@/components/home/Info";
+import SiteFooter from "@/components/SiteFooter";
 import BookingModal from "@/components/BookingModal";
 
 export default function Home() {
@@ -14,14 +14,14 @@ export default function Home() {
 
   return (
     <>
-      <Header onBookClick={() => setBookingOpen(true)} />
+      <Header activePage="hem" onBookClick={() => setBookingOpen(true)} />
       <main>
-        <Hero onBookClick={() => setBookingOpen(true)} />
-        <ValueProps />
-        <Pricing onBookClick={() => setBookingOpen(true)} />
-        <CTA onBookClick={() => setBookingOpen(true)} />
+        <HomeHero onBookClick={() => setBookingOpen(true)} />
+        <Services />
+        <Offers onBookClick={() => setBookingOpen(true)} />
+        <Info />
       </main>
-      <Footer />
+      <SiteFooter />
       <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </>
   );

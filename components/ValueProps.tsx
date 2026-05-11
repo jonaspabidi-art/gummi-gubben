@@ -1,13 +1,13 @@
 export default function ValueProps() {
   return (
     <section
-      className="py-24 px-[var(--spacing-margin-desktop)] mx-auto w-full"
+      className="py-16 md:py-24 px-4 md:px-[var(--spacing-margin-desktop)] mx-auto w-full"
       style={{ maxWidth: "var(--spacing-container-max)" }}
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-[var(--spacing-gutter)]">
         {/* Main card */}
         <div
-          className="md:col-span-8 p-12 border flex flex-col justify-between"
+          className="md:col-span-8 p-6 md:p-12 border flex flex-col justify-between"
           style={{
             background: "var(--color-surface-container)",
             borderColor: "var(--color-outline-variant)",
@@ -94,7 +94,7 @@ export default function ValueProps() {
 
         {/* Safety check card */}
         <div
-          className="md:col-span-4 p-12 border relative overflow-hidden"
+          className="md:col-span-4 p-6 md:p-12 border relative overflow-hidden"
           style={{
             background: "var(--color-inverse-surface)",
             borderColor: "var(--color-primary)",
@@ -146,7 +146,7 @@ export default function ValueProps() {
         </div>
 
         {/* Full-width workshop image */}
-        <div className="md:col-span-12 h-[400px] relative">
+        <div className="md:col-span-12 h-[220px] md:h-[400px] relative">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8i85hi7dEvcic3onR6J90viS-8jw50YJmeE0uf8trapHDprndYKDNW79heEIWdaFWUBWr0XYX3kWRV3WpZbcmcuHCoIsZkXa-yTLdPdRM797v6Mjql8nFU9p8GXPzl-aoVeuC8Erp6rQufK1IpZzhMHl_ILIHx-SgzmqJa4diJNVIsrIgfAs0BwuU31IwoBqBtCmqPc5l7vU5UlB6Gbi9U1f2Rf-t7arAmnlYyNVYNFBVabifiGqy2nNYh04-sw-AmoKh9xeHbB0G"
             alt="Verkstad"
