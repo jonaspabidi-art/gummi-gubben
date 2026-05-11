@@ -11,14 +11,14 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "Hem", href: "/", key: "hem" },
-  { label: "Tjänster", href: "/#tjanster", key: "tjanster" },
+  { label: "Tjänster", href: "/boka", key: "tjanster" },
   { label: "Däckhotell", href: "/dackhotell", key: "dackhotell" },
   { label: "Kontakt", href: "/#kontakt", key: "kontakt" },
 ];
 
 interface HeaderProps {
   onBookClick: () => void;
-  activePage?: "hem" | "dackhotell";
+  activePage?: "hem" | "dackhotell" | "tjanster";
 }
 
 export default function Header({ onBookClick, activePage = "hem" }: HeaderProps) {
@@ -40,9 +40,7 @@ export default function Header({ onBookClick, activePage = "hem" }: HeaderProps)
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
-            const isActive =
-              (item.key === "hem" && activePage === "hem") ||
-              (item.key === "dackhotell" && activePage === "dackhotell");
+            const isActive = item.key === activePage;
             return (
               <Link
                 key={item.key}

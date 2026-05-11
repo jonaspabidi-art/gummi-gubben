@@ -76,7 +76,7 @@ export default function Services() {
 
         {/* Däckhotell – red card */}
         <div
-          className="md:col-span-4 p-6 md:p-8 flex flex-col justify-between border-b-8 text-white"
+          className="md:col-span-4 p-6 md:p-8 flex flex-col justify-between border-b-8 text-white group"
           style={{
             background: "var(--color-primary)",
             borderColor: "var(--color-on-primary-fixed)",
