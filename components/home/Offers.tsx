@@ -162,17 +162,6 @@ export default function Offers() {
                 Gäller utvalda märken som Continental och Michelin vid köp av
                 komplett set.
               </p>
-              <Link
-                href="/boka?service=dackservice"
-                className="w-full text-white text-sm font-semibold uppercase py-3 text-center hover:bg-[var(--color-primary)] transition-colors"
-                style={{
-                  fontFamily: "var(--font-headline)",
-                  background: "var(--color-secondary)",
-                  display: "block",
-                }}
-              >
-                Visa däck
-              </Link>
             </div>
           </div>
         </div>
