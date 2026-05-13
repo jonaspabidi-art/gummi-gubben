@@ -3,15 +3,14 @@ import Image from "next/image";
 
 export default function HomeHero() {
   return (
-    <section className="relative h-[90vh] min-h-[560px] max-h-[900px] flex items-end overflow-hidden">
+    <section className="relative h-[65vh] md:h-[90vh] min-h-[420px] md:min-h-[560px] max-h-[900px] flex items-end overflow-hidden">
       {/* Background image */}
       <Image
         src="/hero.png"
         alt="Gummigubbens däcklager"
         fill
         priority
-        className="object-cover"
-        style={{ objectPosition: "center center" }}
+        className="object-cover object-[center_55%] md:object-center"
       />
 
       {/* Gradient overlay — fades in from bottom-left */}

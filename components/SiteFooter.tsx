@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const pages = [
   { label: "Hem", href: "/" },
@@ -30,15 +31,13 @@ export default function SiteFooter() {
         <div className="flex flex-col md:flex-row justify-between items-start mb-10 md:mb-12 gap-10 md:gap-12">
           {/* Brand */}
           <div className="max-w-xs">
-            <div
-              className="text-xl font-bold uppercase mb-4 md:mb-6"
-              style={{
-                fontFamily: "var(--font-headline)",
-                color: "var(--color-on-primary-fixed)",
-              }}
-            >
-              Gummigubben
-            </div>
+            <Image
+              src="/logo.jpeg"
+              alt="Gummigubben"
+              width={56}
+              height={56}
+              className="rounded-full mb-4 md:mb-6"
+            />
             <p
               className="text-sm leading-relaxed"
               style={{

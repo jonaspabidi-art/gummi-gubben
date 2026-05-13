@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NavItem {
   label: string;
@@ -29,11 +30,15 @@ export default function Header({ activePage = "hem" }: HeaderProps) {
       style={{ fontFamily: "var(--font-headline)" }}
     >
       <nav className="flex justify-between items-center px-4 md:px-[var(--spacing-margin-desktop)] py-4 w-full max-w-[var(--spacing-container-max)] mx-auto">
-        <Link
-          href="/"
-          className="text-xl md:text-2xl font-bold tracking-wide text-[var(--color-primary)] uppercase"
-        >
-          Gummigubben
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.jpeg"
+            alt="Gummigubben"
+            width={48}
+            height={48}
+            className="rounded-full"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
