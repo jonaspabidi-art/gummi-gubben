@@ -31,13 +31,21 @@ export default function SiteFooter() {
         <div className="flex flex-col md:flex-row justify-between items-start mb-10 md:mb-12 gap-10 md:gap-12">
           {/* Brand */}
           <div className="max-w-xs">
-            <Image
-              src="/logo.jpeg"
-              alt="Gummigubben"
-              width={56}
-              height={56}
-              className="rounded-full mb-4 md:mb-6"
-            />
+            <div className="flex items-center gap-3 mb-4 md:mb-6">
+              <Image
+                src="/logo.jpeg"
+                alt="Gummigubben"
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
+              <span
+                className="text-xl font-bold uppercase"
+                style={{ fontFamily: "var(--font-headline)", color: "var(--color-on-primary-fixed)" }}
+              >
+                Gummigubben
+              </span>
+            </div>
             <p
               className="text-sm leading-relaxed"
               style={{

@@ -30,15 +30,21 @@ export default function Header({ activePage = "hem" }: HeaderProps) {
       style={{ fontFamily: "var(--font-headline)" }}
     >
       <nav className="flex justify-between items-center px-4 md:px-[var(--spacing-margin-desktop)] py-4 w-full max-w-[var(--spacing-container-max)] mx-auto">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.jpeg"
             alt="Gummigubben"
-            width={48}
-            height={48}
+            width={40}
+            height={40}
             className="rounded-full"
             priority
           />
+          <span
+            className="text-xl md:text-2xl font-bold tracking-wide uppercase"
+            style={{ fontFamily: "var(--font-headline)", color: "var(--color-primary)" }}
+          >
+            Gummigubben
+          </span>
         </Link>
 
         {/* Desktop nav */}
