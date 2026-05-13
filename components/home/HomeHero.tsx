@@ -1,11 +1,8 @@
-interface HomeHeroProps {
-  onBookClick: () => void;
-}
+import Link from "next/link";
 
-export default function HomeHero({ onBookClick }: HomeHeroProps) {
+export default function HomeHero() {
   return (
     <section className="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMctxfdm60rU6en6vMfsWY_AVvgBMS381km5x6CGSZkvnahiMVZpChYjDap6N-EWwaHvTCR88oBC87OAnHyYRXgjwEJuDap_W6Ti4WIXpFMQLgtMN06McQNt6FgyEuJhmD2oRpUZFhtzKttHdxMa6vUJKPjGc9uPFpF0uwwmZf0s1NtMIEZb77l4gDiJIuGnPvYj63kx2TiJbHYtkDmhRbfZ-C9Y1m-C-sJd7UstmJvtk_YBKqzhC3TgkXdo6n3PzrHCFlyk0MEnbJ"
@@ -38,9 +35,9 @@ export default function HomeHero({ onBookClick }: HomeHeroProps) {
             med personlig touch sedan 1994.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={onBookClick}
-              className="w-full sm:w-auto px-8 md:px-12 py-4 text-sm md:text-base font-bold uppercase tracking-wider hover:brightness-125 transition-all cursor-pointer"
+            <Link
+              href="/boka"
+              className="w-full sm:w-auto px-8 md:px-12 py-4 text-sm md:text-base font-bold uppercase tracking-wider hover:brightness-125 transition-all text-center"
               style={{
                 fontFamily: "var(--font-headline)",
                 background: "var(--color-primary-container)",
@@ -48,7 +45,7 @@ export default function HomeHero({ onBookClick }: HomeHeroProps) {
               }}
             >
               Boka Din Tid Nu
-            </button>
+            </Link>
             <a
               href="mailto:info@gummigubben.se"
               className="flex items-center gap-2 text-white hover:text-[var(--color-primary-fixed-dim)] transition-colors text-sm font-semibold"

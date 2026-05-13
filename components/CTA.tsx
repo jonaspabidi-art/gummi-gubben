@@ -1,8 +1,6 @@
-interface CTAProps {
-  onBookClick: () => void;
-}
+import Link from "next/link";
 
-export default function CTA({ onBookClick }: CTAProps) {
+export default function CTA() {
   return (
     <section
       className="py-16 md:py-24 px-4 md:px-[var(--spacing-margin-desktop)] text-center"
@@ -32,9 +30,9 @@ export default function CTA({ onBookClick }: CTAProps) {
           och checka in dina däck på däckhotellet.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <button
-            onClick={onBookClick}
-            className="w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 text-sm font-semibold uppercase tracking-widest transition-all shadow-xl hover:brightness-110 cursor-pointer"
+          <Link
+            href="/boka?service=dackhotell"
+            className="w-full sm:w-auto px-8 md:px-12 py-4 md:py-5 text-sm font-semibold uppercase tracking-widest transition-all shadow-xl hover:brightness-110 text-center"
             style={{
               fontFamily: "var(--font-headline)",
               background: "var(--color-on-surface)",
@@ -42,7 +40,7 @@ export default function CTA({ onBookClick }: CTAProps) {
             }}
           >
             Boka Online
-          </button>
+          </Link>
           <a
             href="tel:031-517764"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 border-2 px-8 md:px-12 py-4 md:py-5 text-sm font-semibold uppercase tracking-widest transition-all hover:opacity-80"

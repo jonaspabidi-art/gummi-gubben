@@ -1,8 +1,6 @@
-interface OffersProps {
-  onBookClick: () => void;
-}
+import Link from "next/link";
 
-export default function Offers({ onBookClick }: OffersProps) {
+export default function Offers() {
   return (
     <section
       className="py-16 md:py-24"
@@ -89,16 +87,17 @@ export default function Offers({ onBookClick }: OffersProps) {
               >
                 Inklusive tvätt, kontroll av mönsterdjup och korrekt lufttryck.
               </p>
-              <button
-                onClick={onBookClick}
-                className="w-full text-white text-sm font-semibold uppercase py-3 hover:bg-[var(--color-primary)] transition-colors cursor-pointer"
+              <Link
+                href="/boka?service=dackhotell"
+                className="w-full text-white text-sm font-semibold uppercase py-3 text-center hover:bg-[var(--color-primary)] transition-colors"
                 style={{
                   fontFamily: "var(--font-headline)",
                   background: "var(--color-inverse-surface)",
+                  display: "block",
                 }}
               >
                 Boka nu
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -163,15 +162,17 @@ export default function Offers({ onBookClick }: OffersProps) {
                 Gäller utvalda märken som Continental och Michelin vid köp av
                 komplett set.
               </p>
-              <button
-                className="w-full text-white text-sm font-semibold uppercase py-3 hover:bg-[var(--color-primary)] transition-colors cursor-pointer"
+              <Link
+                href="/boka?service=dackservice"
+                className="w-full text-white text-sm font-semibold uppercase py-3 text-center hover:bg-[var(--color-primary)] transition-colors"
                 style={{
                   fontFamily: "var(--font-headline)",
                   background: "var(--color-secondary)",
+                  display: "block",
                 }}
               >
                 Visa däck
-              </button>
+              </Link>
             </div>
           </div>
         </div>

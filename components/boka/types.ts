@@ -13,6 +13,9 @@ export interface Vehicle {
   regNumber: string;
   model: string;
   year: string;
+  name: string;
+  email: string;
+  phone: string;
 }
 
 export interface BookingState {

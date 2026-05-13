@@ -1,14 +1,11 @@
-interface HeroProps {
-  onBookClick: () => void;
-}
+import Link from "next/link";
 
-export default function Hero({ onBookClick }: HeroProps) {
+export default function Hero() {
   return (
     <section
       className="relative flex items-center overflow-hidden min-h-[420px] md:min-h-[614px]"
       style={{ backgroundColor: "var(--color-inverse-surface)" }}
     >
-      {/* Background image */}
       <div className="absolute inset-0 opacity-40">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88mOErgVWLYL_zzqvaGmh59IlDFt23cT6lKmllLahycNE3m9L57avpEk3Z2ZN9uWxCDbu3UrWxMO6yDd6-DPLaV737rH6JWxeXrc4fgKnWJfROdBV8Pw0g3Xss-Y1-D9nMjTAYwgqLo03tTZEpFqlsA7Se0FDmziS6OtJYdSAAJsyG8wvcDYNTM-keu-Uju9IRphXZjwSgtzLGmJSuNvLmILIHxWZsI-nuYzsQEY6X7yHEgjVQtq6uMre6ONfRVNkrWaGemKRDUQj"
@@ -50,9 +47,9 @@ export default function Hero({ onBookClick }: HeroProps) {
             hand om dina hjul under säsongsvilan.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <button
-              onClick={onBookClick}
-              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold hover:shadow-lg transition-all cursor-pointer"
+            <Link
+              href="/boka?service=dackhotell"
+              className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold hover:shadow-lg transition-all text-center"
               style={{
                 fontFamily: "var(--font-headline)",
                 background: "var(--color-primary-container)",
@@ -60,9 +57,10 @@ export default function Hero({ onBookClick }: HeroProps) {
               }}
             >
               Boka Plats Nu
-            </button>
-            <button
-              className="w-full sm:w-auto border-2 px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold transition-all cursor-pointer hover:opacity-80"
+            </Link>
+            <a
+              href="#priser"
+              className="w-full sm:w-auto border-2 px-6 md:px-8 py-3 md:py-4 text-sm uppercase tracking-widest font-semibold transition-all hover:opacity-80 text-center"
               style={{
                 fontFamily: "var(--font-headline)",
                 borderColor: "var(--color-on-surface)",
@@ -70,7 +68,7 @@ export default function Hero({ onBookClick }: HeroProps) {
               }}
             >
               Se Prislista
-            </button>
+            </a>
           </div>
         </div>
       </div>

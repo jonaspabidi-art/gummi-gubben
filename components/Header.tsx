@@ -17,11 +17,10 @@ const navItems: NavItem[] = [
 ];
 
 interface HeaderProps {
-  onBookClick: () => void;
   activePage?: "hem" | "dackhotell" | "tjanster";
 }
 
-export default function Header({ onBookClick, activePage = "hem" }: HeaderProps) {
+export default function Header({ activePage = "hem" }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -65,12 +64,12 @@ export default function Header({ onBookClick, activePage = "hem" }: HeaderProps)
             <span className="material-symbols-outlined text-lg">call</span>
             031-51 77 64
           </a>
-          <button
-            onClick={onBookClick}
-            className="bg-[var(--color-primary-container)] text-[var(--color-on-primary)] px-4 md:px-6 py-2 text-xs md:text-sm uppercase tracking-wider font-semibold hover:brightness-110 transition-all active:scale-95 shadow-sm cursor-pointer whitespace-nowrap"
+          <Link
+            href="/boka"
+            className="bg-[var(--color-primary-container)] text-[var(--color-on-primary)] px-4 md:px-6 py-2 text-xs md:text-sm uppercase tracking-wider font-semibold hover:brightness-110 transition-all active:scale-95 shadow-sm whitespace-nowrap"
           >
             Boka Tid
-          </button>
+          </Link>
           {/* Mobile menu button */}
           <button
             className="md:hidden p-1 text-[var(--color-on-surface)]"
@@ -89,9 +88,7 @@ export default function Header({ onBookClick, activePage = "hem" }: HeaderProps)
         <div className="md:hidden border-t border-[var(--color-outline-variant)] bg-[var(--color-surface)]">
           <div className="flex flex-col px-4 py-4 gap-1">
             {navItems.map((item) => {
-              const isActive =
-                (item.key === "hem" && activePage === "hem") ||
-                (item.key === "dackhotell" && activePage === "dackhotell");
+              const isActive = item.key === activePage;
               return (
                 <Link
                   key={item.key}

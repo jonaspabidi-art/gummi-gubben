@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface PricingTier {
   name: string;
   price: string;
@@ -43,13 +45,10 @@ const tiers: PricingTier[] = [
   },
 ];
 
-interface PricingProps {
-  onBookClick: () => void;
-}
-
-export default function Pricing({ onBookClick }: PricingProps) {
+export default function Pricing() {
   return (
     <section
+      id="priser"
       className="py-16 md:py-24 border-y"
       style={{
         background: "var(--color-surface-container-low)",
@@ -138,9 +137,9 @@ export default function Pricing({ onBookClick }: PricingProps) {
                     </li>
                   ))}
                 </ul>
-                <button
-                  onClick={onBookClick}
-                  className="w-full py-3 text-sm font-semibold uppercase tracking-wider transition-all hover:brightness-110 cursor-pointer"
+                <Link
+                  href="/boka?service=dackhotell"
+                  className="w-full py-3 text-sm font-semibold uppercase tracking-wider transition-all hover:brightness-110 text-center"
                   style={{
                     fontFamily: "var(--font-headline)",
                     background: "var(--color-primary-container)",
@@ -148,7 +147,7 @@ export default function Pricing({ onBookClick }: PricingProps) {
                   }}
                 >
                   {tier.buttonLabel}
-                </button>
+                </Link>
               </div>
             ) : (
               <div
@@ -195,9 +194,9 @@ export default function Pricing({ onBookClick }: PricingProps) {
                     </li>
                   ))}
                 </ul>
-                <button
-                  onClick={onBookClick}
-                  className="w-full border-2 py-3 text-sm font-semibold uppercase tracking-wider transition-all hover:opacity-80 cursor-pointer"
+                <Link
+                  href="/boka?service=dackhotell"
+                  className="w-full border-2 py-3 text-sm font-semibold uppercase tracking-wider transition-all hover:opacity-80 text-center"
                   style={{
                     fontFamily: "var(--font-headline)",
                     borderColor: "var(--color-on-surface)",
@@ -205,7 +204,7 @@ export default function Pricing({ onBookClick }: PricingProps) {
                   }}
                 >
                   {tier.buttonLabel}
-                </button>
+                </Link>
               </div>
             )
           )}

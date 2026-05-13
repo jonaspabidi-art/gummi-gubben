@@ -4,7 +4,6 @@ import { useState } from "react";
 import { TIME_SLOTS } from "./types";
 
 const DAY_LABELS = ["Må", "Ti", "On", "To", "Fr", "Lö", "Sö"];
-const WEEKENDS = [6, 0]; // Sat=6, Sun=0 in JS — we use Mon=0..Sun=6 mapping below
 
 function getDaysInMonth(year: number, month: number) {
   return new Date(year, month + 1, 0).getDate();
@@ -288,7 +287,7 @@ export default function CalendarStep({
             color: "var(--color-on-primary)",
           }}
         >
-          Granska bokning →
+          Bekräfta Bokning
         </button>
       </div>
     </section>
