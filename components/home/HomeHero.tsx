@@ -1,60 +1,65 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomeHero() {
   return (
-    <section className="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMctxfdm60rU6en6vMfsWY_AVvgBMS381km5x6CGSZkvnahiMVZpChYjDap6N-EWwaHvTCR88oBC87OAnHyYRXgjwEJuDap_W6Ti4WIXpFMQLgtMN06McQNt6FgyEuJhmD2oRpUZFhtzKttHdxMa6vUJKPjGc9uPFpF0uwwmZf0s1NtMIEZb77l4gDiJIuGnPvYj63kx2TiJbHYtkDmhRbfZ-C9Y1m-C-sJd7UstmJvtk_YBKqzhC3TgkXdo6n3PzrHCFlyk0MEnbJ"
-          alt="Däck"
-          className="w-full h-full object-cover grayscale brightness-50"
-        />
-      </div>
+    <section className="relative h-[90vh] min-h-[560px] max-h-[900px] flex items-end overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/hero.png"
+        alt="Gummigubbens däcklager"
+        fill
+        priority
+        className="object-cover"
+        style={{ objectPosition: "center center" }}
+      />
 
-      <div className="relative z-10 text-center px-4 md:px-[var(--spacing-margin-mobile)] w-full max-w-3xl mx-auto">
-        <h1
-          className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-wide drop-shadow-lg uppercase"
-          style={{ fontFamily: "var(--font-headline)", letterSpacing: "-0.01em" }}
+      {/* Gradient overlay — fades in from bottom-left */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.05) 100%)",
+        }}
+      />
+
+      {/* Content — pinned to bottom left */}
+      <div className="relative z-10 w-full max-w-[var(--spacing-container-max)] mx-auto px-4 md:px-[var(--spacing-margin-desktop)] pb-12 md:pb-20">
+        <p
+          className="text-xs font-semibold uppercase tracking-[0.15em] md:tracking-[0.2em] mb-3 md:mb-4"
+          style={{ fontFamily: "var(--font-body)", color: "var(--color-primary-fixed-dim)" }}
         >
-          Välkommen till Gummigubben!
+          Däck &amp; Fälg — Göteborg sedan 1994
+        </p>
+
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase text-white mb-6 md:mb-8 leading-none"
+          style={{ fontFamily: "var(--font-headline)", letterSpacing: "-0.02em" }}
+        >
+          Din däckexpert
+          <br />i Göteborg
         </h1>
 
-        <div
-          className="p-6 md:p-8 border-t-4 mx-auto"
-          style={{
-            background: "rgba(0,0,0,0.80)",
-            backdropFilter: "blur(4px)",
-            borderColor: "var(--color-primary)",
-          }}
-        >
-          <p
-            className="text-base md:text-lg text-white mb-6 leading-relaxed"
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+          <Link
+            href="/boka"
+            className="px-8 py-4 text-sm font-bold uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 text-center"
+            style={{
+              fontFamily: "var(--font-headline)",
+              background: "var(--color-primary)",
+              color: "var(--color-on-primary)",
+            }}
+          >
+            Boka tid
+          </Link>
+          <a
+            href="tel:031517764"
+            className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-white hover:text-[var(--color-primary-fixed-dim)] transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Vi är din expert på däck och fälg i Göteborg. Professionell service
-            med personlig touch sedan 1994.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/boka"
-              className="w-full sm:w-auto px-8 md:px-12 py-4 text-sm md:text-base font-bold uppercase tracking-wider hover:brightness-125 transition-all text-center"
-              style={{
-                fontFamily: "var(--font-headline)",
-                background: "var(--color-primary-container)",
-                color: "var(--color-on-primary)",
-              }}
-            >
-              Boka Din Tid Nu
-            </Link>
-            <a
-              href="mailto:info@gummigubben.se"
-              className="flex items-center gap-2 text-white hover:text-[var(--color-primary-fixed-dim)] transition-colors text-sm font-semibold"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              <span className="material-symbols-outlined text-lg">mail</span>
-              info@gummigubben.se
-            </a>
-          </div>
+            <span className="material-symbols-outlined text-base">call</span>
+            031-51 77 64
+          </a>
         </div>
       </div>
     </section>

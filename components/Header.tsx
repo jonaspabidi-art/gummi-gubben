@@ -13,11 +13,11 @@ const navItems: NavItem[] = [
   { label: "Hem", href: "/", key: "hem" },
   { label: "Tjänster", href: "/boka", key: "tjanster" },
   { label: "Däckhotell", href: "/dackhotell", key: "dackhotell" },
-  { label: "Kontakt", href: "/#kontakt", key: "kontakt" },
+  { label: "Kontakt", href: "/kontakt", key: "kontakt" },
 ];
 
 interface HeaderProps {
-  activePage?: "hem" | "dackhotell" | "tjanster";
+  activePage?: "hem" | "dackhotell" | "tjanster" | "kontakt";
 }
 
 export default function Header({ activePage = "hem" }: HeaderProps) {
